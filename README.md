@@ -1,30 +1,9 @@
 # hello-grunt2bin
-to write
 
-## Installation
-Run the following commands to download and install the application:
+grunt2bin sample.
 
-```sh
-$  clone https://github.com/maboiteaspam/hello-grunt2bin hello-grunt2bin
-$ cd hello-grunt2bin
-$ npm install
-```
+see https://github.com/maboiteaspam/hello-grunt2bin/blob/master/index.js
 
-## Documentation
-
-
-
-
-## How to contribute
-
-1. File an issue in the repository, using the bug tracker, describing the
-   contribution you'd like to make. This will help us to get you started on the
-   right foot.
-2. Fork the project in your account and create a new branch:
-   `your-great-feature`.
-3. Commit your changes in that branch.
-4. Open a pull request, and reference the initial issue in the pull request
-   message.
 
 ## License
 See the [LICENSE](./LICENSE) file.
