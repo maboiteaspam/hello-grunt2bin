@@ -4,7 +4,9 @@
   "description": "to write",
   "main": "index.js",
   "scripts": {},
-  "bin": {},
+  "bin": {
+    "hello": "./index.js"
+  },
   "keywords": [
     "To",
     "be",
@@ -20,7 +22,8 @@
     "url": "https://github.com/maboiteaspam/hello-grunt2bin/issues"
   },
   "dependencies": {
-    "commander": "^2.8.1"
+    "commander": "^2.8.1",
+    "grunt2bin": "maboiteaspam/grunt2bin"
   },
   "devDependencies": {
     "should": "^7.0.2"
