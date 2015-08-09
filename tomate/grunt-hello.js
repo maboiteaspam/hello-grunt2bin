@@ -26,10 +26,13 @@ module.exports = function(grunt) {
     }
   })
 
-  // or even rewrite a task from scratch
-  grunt.registerTask('default', function(){
-    console.log('hello the world from grunt2bin !')
-  })
+  // I can also perosnnalize the workflow
+  grunt.registerTask('default', ['confirm_username', 'hello'])
+
+  // even completely rewrite it.
+  //grunt.registerTask('default', function(){
+  //  console.log('hello the world from grunt2bin !')
+  //})
 
   // obviously, we could do some stuff more advanced
   // to make that much more useful.

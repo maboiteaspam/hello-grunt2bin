@@ -10,9 +10,10 @@
 require('grunt2bin')(function(grunt, cwd){
   // let s init a default config for my super task
   grunt.initConfig({
+    'user': 'put your username here',
     'hello': {
       options: {
-        'user': 'put your username here'
+        'user': '<%= user %>'
       }
     }
   })
