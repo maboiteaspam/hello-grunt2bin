@@ -1,7 +1,7 @@
 # hello-grunt2bin
 
-grunt2bin demo. This repo demonstrate how wa can take advantage of 
-grunt within a node package installed globally.
+`grunt2bin` demo. This repo demonstrate how we can take advantage of 
+`grunt` within a node package installed globally.
 
 See also https://github.com/maboiteaspam/grunt2bin
 
