@@ -12,7 +12,7 @@ See also https://github.com/maboiteaspam/grunt2bin
 # Usage
 
 ```
-    hello
+    hello : Prints out the username.
     
     options: -
 ```
