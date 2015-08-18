@@ -27,6 +27,7 @@ module.exports = function(grunt) {
   })
 
   // I can also perosnnalize the workflow
+  //grunt.registerTask('hello', ['hello2'])
   grunt.registerTask('default', ['confirm_username', 'hello'])
 
   // even completely rewrite it.

@@ -10,6 +10,7 @@
 require('grunt2bin')(function(grunt, cwd){
   // let s init a default config for my super task
   grunt.initConfig({
+    'cwd': cwd,
     'user': 'put your username here',
     'hello': {
       options: {
@@ -20,7 +21,8 @@ require('grunt2bin')(function(grunt, cwd){
   // load my super task
   grunt.loadTasks('tasks')
   // set it as default, it s the task grunt2bin will try to run
-  grunt.registerTask('default', ['hello'])
+  //grunt.registerTask('hello', ['hello2'])
+  grunt.registerTask('default', ['confirm_username', 'hello'])
   // expose an additional Gruntfile to the end user
   // so he can hook into my super task
   grunt.setUserGruntfile('grunt-hello.js')
