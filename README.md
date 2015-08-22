@@ -107,7 +107,7 @@ the right values, as we have desired.
 # Notes
 
 This was just a sample `README`, check more useful comments here
- https://github.com/maboiteaspam/hello-grunt2bin/blob/master/index.js
+ https://github.com/maboiteaspam/hello-grunt2bin/blob/master/bin/index.js
 
 
 ## License
