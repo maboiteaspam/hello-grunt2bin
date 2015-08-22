@@ -22,12 +22,9 @@
     "url": "https://github.com/maboiteaspam/hello-grunt2bin/issues"
   },
   "dependencies": {
-    "commander": "^2.8.1",
     "grunt2bin": "maboiteaspam/grunt2bin",
-    "inquirer": "^0.9.0",
-    "underscore": "^1.8.3"
+    "inquirer": "^0.9.0"
   },
   "devDependencies": {
-    "should": "^7.0.2"
   }
 }
