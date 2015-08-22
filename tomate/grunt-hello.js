@@ -33,7 +33,7 @@ module.exports = {
   run: function(main, grunt) {
     // It expects to use a Facade of grunt.
     // It helps to construct, update a workflow.
-    var TasksWorkflow = require('../lib/tasks-workflow.js')
+    var TasksWorkflow = require('grunt2bin/lib/tasks-workflow.js')
 
     // It is possible to replace the task,
     // or the target, like grunt
