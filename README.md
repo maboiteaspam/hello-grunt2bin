@@ -38,7 +38,7 @@ module.exports = {
 
 #### Change the default workflow.
 
-By default, may not do exactly the desired effects.
+By default, the program may not do exactly the desired effects.
 
 The personalization mechanism provided by the configuration is a first step that we can appreciate.
 
@@ -59,7 +59,7 @@ grunt2bin.handleProgram({
 })
 ```
 
-2. It updates main program workflow and adds two tasks `['confirm_username', 'hello']`.
+2. The module `hello-grunt2bin` updates main program workflow and adds two tasks `['confirm_username', 'hello']`.
 
 ```js
 grunt2bin.handleProgram({
@@ -81,7 +81,7 @@ grunt2bin.handleProgram({
    you can now proceed that way.
 
 ```js
-grunt2bin.handleProgram({
+module.exports = {
   config: function(grunt, cwd){...}
   run: function(main){
   
@@ -95,7 +95,7 @@ grunt2bin.handleProgram({
     )
     
   }
-})
+}
 ```
 
 
