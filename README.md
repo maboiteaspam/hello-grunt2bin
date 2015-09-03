@@ -38,13 +38,16 @@ module.exports = {
 
 #### Change the default workflow.
 
-By default, the program may not do exactly the desired effects.
+By default, the program may not implement the workflow of your dreams.
 
 The personalization mechanism provided by the configuration is a first step that we can appreciate.
 
-With help of tasks workflow, it is possible to update / rewrite the program workflow.
+With help of `TasksWorkflow`, it is possible to update / rewrite the program workflow.
 
-1. The module `grunt2bin` exports a main tasks workflow, the program workflow
+
+The process happens that way:
+
+1. The module `grunt2bin` exports a new instance of `TasksWorkflow`, main, the `default` one
 
 ```js
   var main = new TasksWorkflow()
@@ -55,16 +58,19 @@ With help of tasks workflow, it is possible to update / rewrite the program work
 ```js
 grunt2bin.handleProgram({
   config: function(grunt, cwd){...}
-  run: function(main){ ...}
+  run: function(main, grunt, cwd, TasksWorkflow){ ...}
 })
 ```
 
-2. The module `hello-grunt2bin` updates main program workflow and adds two tasks `['confirm_username', 'hello']`.
+2. The module `hello-grunt2bin` updates the main program workflow 
+and adds two tasks `['confirm_username', 'hello']`.
 
 ```js
+var TasksWorkflow = grunt2bin.TasksWorkflow
+
 grunt2bin.handleProgram({
   config: function(grunt, cwd){...}
-  run: function(main){
+  run: function(main, grunt, cwd, TasksWorkflow){
   
     TasksWorkflow()
       .appendTask( TasksWorkflow.createTask('confirm_username'))
@@ -77,16 +83,16 @@ grunt2bin.handleProgram({
 })
 ```
 
-3. Within the `grunt-hello.js` file dropped at root of your project,
-   you can now proceed that way.
+3. Now you can declare a file `hello-grunt2bin.js` at `cwd`
+   and proceed that way.
 
 ```js
 module.exports = {
   config: function(grunt, cwd){...}
-  run: function(main){
+  run: function(main, grunt, cwd, TasksWorkflow){
   
-    main.replaceTarget('hello', 'target1',
-      TasksWorkflow.createTask('hello2', 'target1', {
+    main.replaceTarget('hello', '_0target',
+      TasksWorkflow.createTask('hello2', 'whatever', {
           options: {
             some: 'opts',
             user: '<%=user%>'
@@ -98,11 +104,24 @@ module.exports = {
 }
 ```
 
+That will update the workflow by replacing
+`hello:_0target` task with `hello2:whatever`.
 
-That will affect the pipeline, and introduce a new step to inquire username,
-then re configure the `grunt` instance config to finally, execute `hello` task with
-the right values, as we have desired.
+Don't forget to check and review the workflow with `--describe` argument
 
+```
+HELLO-GRUNT2BIN
+to write
+
+Tasks configured for this module:
+
+ - WELCOME
+   This task inquire user to confirm the user name to use, then say hello.
+
+   Alias of
+    - confirm_username:_0target
+    - hello:_1target
+```
 
 # Notes
 

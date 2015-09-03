@@ -21,10 +21,6 @@ grunt2bin.handleProgram({
     })
     // and also load my super tasks
     grunt.loadTasks('tasks')
-    // This is a specific instruction,
-    // It instructs to expose an additional Gruntfile to the end user.
-    // The end user can now drop such file on his cwd to hook into the program.
-    grunt.setUserGruntfile('grunt-hello.js')
   },
   // run: To initialize or change the tasks workflow.
   run: function(main, grunt, cwd){
@@ -38,7 +34,7 @@ grunt2bin.handleProgram({
       .appendTask( TasksWorkflow.createTask('confirm_username'))
       .appendTask( TasksWorkflow.createTask('hello'))
       .packToTask('welcome',
-      'Welcome user needs to get his user name first !`.'
+      'This task inquire user to confirm the user name to use, then say hello.'
       // main is then a workflow of many [tasks units].
     ).appendTo(main);
 

@@ -87,7 +87,7 @@ module.exports = {
     // TasksWorkflow()
     //  .appendTask( TasksWorkflow.createTask('hello2'))
     //  .packToTask('welcome',
-    //  'Welcome user needs to get his user name first !`.'
+    //  'This task inquire user to confirm the user name to use, then say hello.'
     // ).appendTo(main);
 
     // obviously, we could do some stuff more advanced
