@@ -1,3 +1,6 @@
+// under the hood it is all using regular grunt tasks
+// just write them as usual under tasks/ folder.
+
 module.exports = function (grunt){
 
   var inquirer = require('inquirer')
