@@ -8,7 +8,7 @@
 // It will let me personalize hello-grunt2bin tasks
 module.exports = {
 
-  // This file should export
+  // handleProgram expects
   // an Object with three keys.
 
   // compatible version with your program
@@ -57,7 +57,8 @@ module.exports = {
      or not at all.
      */
   },
-  // grunt tasks workflow build
+
+  // grunt tasks workflow to build
   run: function(main, grunt, cwd, TasksWorkflow){
     // It expects to use a Facade of grunt.
     // It helps to constructs, updates a workflow.
